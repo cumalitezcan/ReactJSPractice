@@ -3,10 +3,12 @@ import Navi from './Navi';
 import CategoryList from './CategoryList';
 import ProductList from './ProductList';
 import { Container, Row, Col } from 'reactstrap';
-import alertify from "alertifyjs"
+import alertify from "alertifyjs";
 import { Switch, Route } from 'react-router-dom'
 import NotFound from './NotFound';
 import CartList from './CartList';
+import FormDemo1 from './FormDemo1';
+import FormDemo2 from './FormDemo2';
 
 export default class App extends Component {
 
@@ -54,7 +56,7 @@ export default class App extends Component {
   render() {
     let categoryInfo = { title: "Category List" }
     let productInfo = { title: "Product List" }
-    console.log(this.state.products)
+   
     return (
       <div>
         <Container>
@@ -75,6 +77,8 @@ export default class App extends Component {
                   <Col xs="9"> <CartList {...props} cart={this.state.cart} removeFromCart={this.removeFromCart}  /> </Col>
                 )
               } />
+                <Route path="/form1" component={FormDemo1} ></Route>
+                <Route path="/form2" component={FormDemo2} ></Route>
               <Route component={NotFound} />
             </Switch>
 

@@ -9,6 +9,7 @@ import {
   NavLink,
   NavbarText
 } from 'reactstrap';
+import {Link} from 'react-router-dom';
 import CartSummary from './CartSummary';
 
 const Navi = (props) => {
@@ -24,7 +25,14 @@ const Navi = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink>
+              <Link to="form1">Form Demo 1 </Link>
+               </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+              <Link to="form2">Form Demo 2 </Link>
+               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
